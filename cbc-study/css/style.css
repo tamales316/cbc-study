@@ -1,7 +1,9 @@
 .header{
   height:150px;
   margin-bottom:20px;
-  border: 1px solid #000;
+  background-color:#d9e021;
+  display: flex;
+  align-items: center;
 }
 .header_contents{
   margin:0 auto;
@@ -10,7 +12,14 @@
 }
 .logo{
   width:200px;
-  border: 1px solid #000;
+  color:#52b6ac;
+  font-size:12px;
+  display:flex;
+  align-items:center;
+}
+.logo img{
+  width:50px;
+  margin-right:10px;
 }
 .contents{
   margin:0 auto;
@@ -19,12 +28,14 @@
 }
 .visual{
   height:400px;
+  background: url("../images/top_bg.jpg") no-repeat center center;
+  display: flex;
+  align-items: center;
 }
 .copy{
-  width:300px;
-  height:250px;
-  margin-top:50px;
-  border: 1px solid #000;
+  color:#FFF; /*文字の色指定*/
+  margin-left:100px; /*左側の余白*/
+  font:normal 32px/2em sans-serif;
 }
 .text_wrapper{
   height:200px;
@@ -50,3 +61,4 @@
   width:980px;
   text-align: center;
 }
+
