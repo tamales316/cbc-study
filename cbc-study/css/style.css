@@ -1,3 +1,17 @@
+body{
+  margin:0; 
+}
+ul{
+  list-style: none;
+}
+a{
+  color:#666;
+  text-decoration: none;
+}
+a:hover{ 
+  color:#00F;
+}
+
 .header{
   height:150px;
   margin-bottom:20px;
@@ -21,10 +35,18 @@
   width:50px;
   margin-right:10px;
 }
+.navi{
+  margin-left:auto;
+}
+.navi ul{
+  display: flex;
+}
+.navi li{
+  margin-left:40px;
+}
 .contents{
   margin:0 auto;
   width:980px;
-  border: 1px solid #00F;
 }
 .visual{
   height:400px;
@@ -33,11 +55,12 @@
   align-items: center;
 }
 .copy{
-  color:#FFF; /*文字の色指定*/
-  margin-left:100px; /*左側の余白*/
+  color:#FFF; 
+  margin-left:100px; 
   font:normal 32px/2em sans-serif;
 }
 .text_wrapper{
+  margin:0 auto;
   height:200px;
   display:flex;
   justify-content: center;
@@ -58,16 +81,52 @@
   display:flex;
   align-items: center;
 }
-.footer{
-  height:120px;
-  margin-top:30px;
-  background-color:#bec9c9;
+.lesson{
   display:flex;
-  justify-content: center;
+}
+.lesson_item{
+  width:33%;
+  height:500px;
+  margin-top:100px;
+  padding:0 15px;
+  text-align:center;
+}
+.lesson_item img{
+  width:300px;
+}
+.catchcopy{
+  width:980px;
+  margin:80px auto 100px;
+  display:flex;
+}
+.readcopy{
+  color:#9941D8;
+  font: bold 36px/1 sans-serif;
+  text-align:right;
+  flex:1;
+}
+.bodycopy{
+  padding-left:20px;
+  font: normal 1em/1.4 serif;
+  flex:3; 
+}
+
+.footer{
+  height:280px;
+  margin-top:30px;
+  background-color:#bec9c9
 }
 .footer_contents{
   width:980px;
-  text-align: center;
-  align-self: flex-end;
+  margin:0 auto;
+  display:flex;
+  justify-content: space-around;
 }
-
+.footer_contents ul{
+  padding:0;
+  line-height:2;
+}
+.copyright{
+  text-align:center;
+  margin-top:30px;
+}
