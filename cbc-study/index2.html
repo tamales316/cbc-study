@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>flexテスト</title>
+    </head>
+    <body>
+        <style>
+  .container{
+  height:160px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.box{
+  height:50px;
+  width:100px;
+  background-color:#eee;
+}
+  
+  /*----- ここから初期設定 -----*/
+  div,ul {
+    border: 3px solid #fcc;
+    padding: 3px;
+  }
+  div > div,span,li,p{
+      background: #eee;
+      margin: 2px;
+      padding: 0 5px;]
+      border: 1px solid #ccc;
+      list-style: none;
+    }
+  /*----- ここまで初期設定 -----*/
+  </style>
+
+<div class="container">
+    <div class="box">子要素</div>
+</div>
+
+</body>
+</html>
