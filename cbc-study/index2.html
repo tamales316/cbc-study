@@ -17,7 +17,65 @@
   width:100px;
   background-color:#eee;
 }
-  
+li{
+  margin:15px 20px;
+  padding:15px 20px;
+}
+.wrap2 li{
+  display:inline;
+}
+.wrap3 li{
+  display:inline-block;
+}
+
+span{
+  margin:15px;
+  padding:15px;
+}
+.wrap4 span{
+  display:block;
+}
+.wrap5 span{
+  display:inline-block;
+}
+.wrap6{
+  display:table; /*ラッパーをtable指定*/
+  width:300px;
+}
+.wrap6 p{
+  display:table-cell; /*tableの子要素にする*/
+  vertical-align:middle; /*天地の中央に成るように配置*/
+  height:100px;
+}
+.wrap7{  /*親要素*/
+  position:relative;
+  width:300px;
+  height:90px;
+}
+.wrap7 div{  /*子要素のすべて*/
+  position:absolute;
+  height:30px;
+  width:100px;
+}
+.box1{ /*赤*/
+  background-color:#F00;
+  left:20px; /*左からの距離*/
+  top:30px;  /*上からの距離*/
+  z-index:1;
+}
+.box2{ /*ピンク*/
+  background-color:#F0F;
+  left:120px;
+  bottom:20px;  /*下からの距離*/
+  z-index:10;
+}
+.box3{ /*緑*/
+  background-color:#0F0;
+  top:25px;
+  right:20px; /*右からの距離*/
+  z-index:2;
+}
+
   /*----- ここから初期設定 -----*/
   div,ul {
     border: 3px solid #fcc;
@@ -35,6 +93,72 @@
 
 <div class="container">
     <div class="box">子要素</div>
+</div>
+
+ただのli
+<ul>
+  <li>あいう</li>
+  <li>かきく</li>
+</ul>
+
+inlineに変更
+<ul class="wrap2">
+  <li>さしす</li>
+  <li>たちつ</li>
+</ul>
+
+inline-blockに変更
+<ul class="wrap3">
+  <li>なにぬ</li>
+  <li>はまや</li>
+</ul>
+
+ただのspan
+<div>
+  <span>あいう</span>
+  <span>かきく</span>
+</div>
+
+blockに変更
+<div class="wrap4">
+  <span>さしす</span>
+  <span>たちつ</span>
+</div>
+
+inline-blockに変更
+<div class="wrap5">
+  <span>なにぬ</span>
+  <span>はまや</span>
+</div>
+
+ただのp
+<div>
+  <p>あいうえお</p>
+  <p>かきくけこ</p>
+</div>
+
+tableに変更
+<div class="wrap6">
+  <p>さしすせそ</p>
+  <p>たちつてと</p>
+</div>
+
+ただのdivは縦に落ちる
+<div>
+  <div>あいう</div>
+  <div>かきく</div>
+</div>
+
+positionで自由な位置に配置
+<div class="wrap7">
+  <div class="box1">さしす</div>
+  <div class="box2">たちつ</div>
+</div>
+
+z-indexでの重ね順
+<div class="wrap7">
+  <div class="box2">たちつ</div>
+  <div class="box3">なにぬ</div>
 </div>
 
 </body>
