@@ -76,6 +76,61 @@ span{
   z-index:2;
 }
 
+.wrap8{
+  width:300px;
+}
+.wrap8 > div{
+  width:100px;
+  height:70px;
+}
+.float-box{
+  float:left; /* 左へ */
+}
+.float-box2{
+  float:right; /* 右へ */
+}
+
+/* クリアフィックスを指定 */
+.clearfix:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+*{
+  color:#f00;
+}
+.wrap11 a:hover{ /*マウスオーバーしたとき*/
+  color:#F00;
+}
+.wrap11 p:nth-child(3){  /*3番目の*/
+  font-weight:bold;
+}
+.wrap11 p:nth-child(odd){  /*odd奇数、even偶数*/
+  background-color:#0F0;
+}
+.giji::before{
+  content:'● ';
+}
+.giji2::after{
+  content:' >>';
+}
+a:hover::after{
+  content:' →';
+}
+p::first-letter{
+  font-size:2em;
+}
+.wrap12 p[class="gnavi"]{
+  color:#f00;
+}
+/*target属性をつけている要素に対して*/
+a[target="_blank"]::after{
+  content:' →';
+}
+.wrap13 > p{
+  color:#f00;
+}
   /*----- ここから初期設定 -----*/
   div,ul {
     border: 3px solid #fcc;
@@ -161,5 +216,66 @@ z-indexでの重ね順
   <div class="box3">なにぬ</div>
 </div>
 
+ただのdiv
+<div class="wrap8">
+  <div>あいう</div>
+  <div>えお</div>
+</div>
+
+子要素をfloat:left;
+<div class="wrap8 clearfix">
+  <div class="float-box">かきくけこ</div>
+  <div class="float-box">かきくけこ</div>
+</div>
+
+子要素をfloat:right;
+<div class="wrap8 clearfix">
+  <div class="float-box">かきくけこ</div>
+  <div class="float-box2">さしすせそ</div>
+</div>
+
+親要素にclerfixをかけなかった場合
+<div class="wrap8">
+  <div class="float-box">たちつてと</div>
+  <div class="float-box">たちつてと</div>
+</div>
+<div>
+  <span>下にある要素</span>
+</div>
+
+<div>
+  <div>ボックスA</div>
+  <p>ボックスB</p>
+  <span>ボックスC</span>
+　　あいうえお
+</div>
+
+<div class="wrap11">
+  <p><a href="">リンクA</a></p>
+  <p><a href="">リンクB</a></p>
+  <p><a href="">リンクC</a></p>
+  <p><a href="">リンクD</a></p>
+</div>
+<div>
+  <div class="giji">ボックスA</div>
+  <div class="giji2">ボックスB</div>
+  <div><a href="">ボックスC</a></div>
+  <p>ボックスD</p>
+</div>
+<div class="wrap12">
+  <p>HOME | MAIN</p>
+  <p class="gnavi">HOME | MAIN</p>
+  <a href="">リンク先A</a><br>
+  <a href="" target="_blank">リンク先B</a>
+</div>
+<div class="wrap13 sample">
+  <p>ボックスA</p>
+  <p>ボックスB</p>
+  <div>
+    <p>ボックスZ</p>
+  </div>
+  <p>ボックスC</p>
+  <p>ボックスD</p>
+</div>
 </body>
 </html>
